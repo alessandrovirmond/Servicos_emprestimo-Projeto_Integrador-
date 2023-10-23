@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de CPF</title>
+</head>
+<body>
+    <div id="app">
+        <h1>Consulta de CPF</h1>
+        <input id="cpfInput" placeholder="Digite o CPF" />
+        <button id="consultarCPFButton">Consultar</button>
+        
+        <div id="clienteEncontrado">
+            
+            <p id="clienteNome">- </p>
+
+        </div>
+    
+        <div id="emprestimoForm" >
+            <h2>Solicitar Empréstimo</h2>
+            <label for="valorEmprestimo">Valor do Empréstimo (R$) [Max: 50.000, Min: 500]:</label>
+            <input type="number" id="valorEmprestimo" min="500" max="50000" step="500" required>
+    
+            <label for="formaPagamento">Forma de Pagamento:</label>
+            <select id="formaPagamento">
+                <option value="2">2 meses</option>
+                <option value="3">3 meses</option>
+                <option value="4">4 meses</option>
+                <option value="5">5 meses</option>
+                <option value="6">6 meses</option>
+                <option value="7">7 meses</option>
+                <option value="8">8 meses</option>
+                <option value="9">9 meses</option>
+                <option value="10">10 meses</option>
+                <option value="11">11 meses</option>
+                <option value="12">12 meses</option>
+                
+            </select>
+            <button id="realizarEmprestimo">Realizar Empréstimo</button>
+            
+        </div>
+    </div>
+    <div id="mensagemErro"></div>
+    <div id="parcelas">
+        
+    </div>
+    
+    <script  type="module" src="/main.ts"></script>
+</body>
+</html>

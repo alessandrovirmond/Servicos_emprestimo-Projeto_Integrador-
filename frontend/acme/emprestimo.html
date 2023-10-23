@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Empréstimos</title>
+</head>
+<body>
+    <h1>Lista de Empréstimos</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Data e Hora</th>
+                <th>Cliente</th>
+                <th>CPF</th>
+                <th>Valor Empréstimo (R$)</th>
+                <th>Forma de Pagamento</th>
+                <th>Valor Final (R$)</th>
+            </tr>
+        </thead>
+        <tbody id="tabelaEmprestimos">
+            
+        </tbody>
+    </table>
+
+    <script type="module">
+        import { EmprestimoController } from './src/controller/emprestimoController.ts';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const emprestimoController = new EmprestimoController();
+            emprestimoController.listarEmprestimos();
+        });
+    </script>
+</body>
+</html>
